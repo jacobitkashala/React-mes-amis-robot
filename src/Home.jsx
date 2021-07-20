@@ -47,12 +47,12 @@ class Home extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         let robotDataAll = [{ image: "" }];
-        
-        for(const index in data){
+
+        for (const index in data) {
           robotDataAll = [...data];
           robotDataAll[index].image = "https://robohash.org/" + index;
         };
-       
+
         this.setState({
           robotData: robotDataAll,
           robotDataRef: robotDataAll,
@@ -75,7 +75,7 @@ class Home extends React.Component {
         ) : (
           <>
             <div className="row container--title">
-              <h1 className="col-sm-5 title">MES AMIS ROBOTS</h1>
+              <h1 className="col-sm title">MES AMIS ROBOTS</h1>
               <input className="col-sm-5" onChange={this.onSeach} />
             </div>
             <div>
