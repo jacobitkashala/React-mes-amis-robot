@@ -3,21 +3,21 @@ import "./Style.css";
 
 const Cart = ({
   dataRobot,
+  clickCart,
   robotChosen,
   isClickedCart,
-  clickCart,
   hiddenClickCart,
 }) => {
   function showRobt(data) {
     let cartRobot = data.map((infoRobot, index) => {
       return (
-        <div key={index} className="bloc--imag col-sm-3" id="">
+        <div key={index} className="col-sm-3 col bloc--imag m-2" onClick={() => {
+          clickCart(infoRobot.id);
+        }}>
           <img
             src={infoRobot.image}
-            className=""
-            onClick={() => {
-              clickCart(infoRobot.id);
-            }}
+            className="img-fluid"
+
             alt={infoRobot.id}
           />
           <div className="bloc--info">
@@ -50,7 +50,6 @@ const Cart = ({
             <h2 className=""> website :{infoRobot.website}</h2>
             <h2 className=""> Company name :{infoRobot.company.name}</h2>
             <h2 className="">
-              {" "}
               Company catchPhrase :{infoRobot.company.catchPhrase}
             </h2>
           </div>
@@ -62,7 +61,6 @@ const Cart = ({
 
   let cartRobot = showRobt(dataRobot);
   let cartRobotChosen = showRobtDetail(robotChosen);
-  console.log(isClickedCart);
 
   return <>{isClickedCart ? cartRobotChosen : cartRobot}</>;
 };

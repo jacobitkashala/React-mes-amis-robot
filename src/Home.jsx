@@ -74,12 +74,15 @@ class Home extends React.Component {
           </div>
         ) : (
           <>
-            <div className="row container--title">
+            <div className="row mt-3">
               <h1 className="col-sm title">MES AMIS ROBOTS</h1>
+            </div>
+
+            <div className="row mx-5 mt-3">
               <input className="col-sm-5" onChange={this.onSeach} />
             </div>
             <div>
-              <div className="row container-galerie">
+              <div className="row container-galerie mt-3">
                 <Cart
                   clickCart={this.onClickCart}
                   dataRobot={dataRobot}
