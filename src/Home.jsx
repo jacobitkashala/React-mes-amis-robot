@@ -78,8 +78,8 @@ class Home extends React.Component {
               <h1 className="col-sm title">MES AMIS ROBOTS</h1>
             </div>
 
-            <div className="row mx-5 mt-3">
-              <input className="col-sm-5" onChange={this.onSeach} />
+            <div className="row  mt-3">
+              <input className="col-sm-12 col-md-3" onChange={this.onSeach} />
             </div>
             <div>
               <div className="row container-galerie mt-3">

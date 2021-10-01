@@ -11,7 +11,7 @@ const Cart = ({
   function showRobt(data) {
     let cartRobot = data.map((infoRobot, index) => {
       return (
-        <div key={index} className="col-sm-3 col bloc--imag m-2" onClick={() => {
+        <div key={index} className="col-sm-12 col-md-3 col bloc--imag m-2" onClick={() => {
           clickCart(infoRobot.id);
         }}>
           <img
